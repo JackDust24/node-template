@@ -1,0 +1,2 @@
+ GET / 500 6.709 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:134.0) Gecko/20100101 Firefox/134.0 Mon, 03 Mar 2025 12:15:27 GMT - error-message: Not found
+ GET /blogs 500 64.192 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:134.0) Gecko/20100101 Firefox/134.0 Mon, 03 Mar 2025 12:16:11 GMT - error-message: Invalid status code: undefined

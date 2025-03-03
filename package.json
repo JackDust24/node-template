@@ -1,0 +1,26 @@
+{
+  "name": "hawk-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-status": "^2.1.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.11.0",
+    "morgan": "^1.10.0",
+    "validator": "^13.12.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
