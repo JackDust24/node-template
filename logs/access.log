@@ -1,2 +1,92 @@
  GET / 500 6.709 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:134.0) Gecko/20100101 Firefox/134.0 Mon, 03 Mar 2025 12:15:27 GMT - error-message: Not found
  GET /blogs 500 64.192 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:134.0) Gecko/20100101 Firefox/134.0 Mon, 03 Mar 2025 12:16:11 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 59.340 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:27:48 GMT - error-message: detail.message.join is not a function
+ POST /auth/register 400 30.686 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:31:36 GMT - error-message: Password should atleast be 8 charcters with one uppercase and lowercase letter, number and special charcter
+ POST /auth/register 500 70.630 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:32:02 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 91.031 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:37:45 GMT - error-message: Email already taken
+ POST /auth/register 500 64.805 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:39:01 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 111.760 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:40:07 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 71.636 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:45:16 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 457.600 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:56:18 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 90.847 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 07:56:42 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 500 55.051 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 08:14:13 GMT - error-message: Invalid status code: undefined
+ POST /auth/register 201 69.827 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 08:15:39 GMT
+ POST /auth/register 201 153.623 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 08:22:16 GMT
+ POST /auth/register 500 128.671 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:15:21 GMT - error-message: Cannot read properties of undefined (reading 'generateAuthToken')
+ POST /auth/register 400 69.784 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:17:25 GMT - error-message: Email already taken
+ POST /auth/register 201 49.478 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:17:30 GMT
+ GET /auth/login 404 17.640 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:42:12 GMT - error-message: Not found
+ GET /auth/login 404 7.791 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:43:00 GMT - error-message: Not found
+ GET /auth/login 404 10.582 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:44:35 GMT - error-message: Not found
+ POST /auth/login 500 89.364 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:48:14 GMT - error-message: bcrypt is not defined
+ POST /auth/register 500 40.781 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:48:27 GMT - error-message: bcrypt is not defined
+ POST /auth/register 201 60.175 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:49:07 GMT
+ POST /auth/login 200 49.308 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 10:49:34 GMT
+ POST /auth/login 200 166.473 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:21:26 GMT
+ POST /auth/refresh-token 401 41.496 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:23:34 GMT - error-message: Please authenticate
+ POST /auth/login 200 159.661 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:24:12 GMT
+ POST /auth/refresh-token 401 10.838 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:24:29 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 44.884 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:26:49 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 60.006 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:28:21 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 25.317 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:28:39 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 34.821 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:29:14 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 73.007 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:36:57 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 413.906 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:37:26 GMT - error-message: Please authenticate
+ POST /auth/login 200 105.646 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:41:01 GMT
+ POST /auth/refresh-token 401 17.382 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:41:16 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 106.215 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:44:15 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 75.316 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:46:34 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 61.694 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:49:01 GMT - error-message: Please authenticate
+ POST /auth/login 200 109.962 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:55:35 GMT
+ POST /auth/refresh-token 401 15.883 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 12:55:59 GMT - error-message: Please authenticate
+ POST /auth/login 200 184.695 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:05:06 GMT
+ POST /auth/refresh-token 401 11.039 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:05:10 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 36.550 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:05:35 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 23.383 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:05:56 GMT - error-message: Please authenticate
+ POST /auth/login 200 71.038 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:06:00 GMT
+ POST /auth/refresh-token 401 22.783 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:06:03 GMT - error-message: Please authenticate
+ POST /auth/login 200 147.203 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:09:24 GMT
+ POST /auth/refresh-token 401 14.338 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:09:29 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 24.362 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:10:31 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 23.984 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:11:07 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 25.713 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:11:53 GMT - error-message: Please authenticate
+ POST /auth/login 200 83.245 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:12:21 GMT
+ POST /auth/refresh-token 401 10.635 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:12:37 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 41.075 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:13:09 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 40.493 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:14:37 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 33.457 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:15:00 GMT - error-message: Please authenticate
+ POST /auth/login 500 7.093 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:20:53 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 500 5.639 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:21:06 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 500 6.432 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:21:51 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 500 27.087 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:23:32 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 500 12.413 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:25:25 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 500 34.073 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:26:20 GMT - error-message: Cannot destructure property 'email' of 'req.body' as it is undefined.
+ POST /auth/login 200 150.613 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:28:25 GMT
+ POST /auth/refresh-token 401 23.895 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:28:47 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 103.587 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:29:19 GMT - error-message: Please authenticate
+ POST /auth/login 200 100.193 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:32:00 GMT
+ POST /auth/refresh-token 401 16.853 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:32:03 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 43.138 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:32:28 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 28.987 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:32:56 GMT - error-message: Please authenticate
+ POST /auth/login 200 68.141 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:33:00 GMT
+ POST /auth/refresh-token 401 25.306 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:33:03 GMT - error-message: Please authenticate
+ POST /auth/login 200 119.238 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:34:36 GMT
+ POST /auth/refresh-token 401 15.259 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:34:40 GMT - error-message: Please authenticate
+ POST /auth/login 200 133.754 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:38:41 GMT
+ POST /auth/refresh-token 401 17.447 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:39:14 GMT - error-message: Please authenticate
+ POST /auth/login 200 99.550 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:42:13 GMT
+ POST /auth/refresh-token 401 9.892 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:42:16 GMT - error-message: Please authenticate
+ POST /auth/login 200 128.952 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:44:54 GMT
+ POST /auth/refresh-token 401 17.925 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:44:58 GMT - error-message: Please authenticate
+ POST /auth/login 200 200.989 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:49:13 GMT
+ POST /auth/refresh-token 401 48.286 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:49:17 GMT - error-message: Please authenticate
+ POST /auth/login 200 118.197 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:50:43 GMT
+ POST /auth/refresh-token 401 16.941 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:50:46 GMT - error-message: Please authenticate
+ POST /auth/login 200 125.660 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:52:50 GMT
+ POST /auth/refresh-token 401 11.290 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:52:53 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 200 33.437 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 13:53:10 GMT
+ POST /auth/login 200 281.537 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 14:11:55 GMT
+ POST /auth/refresh-token 401 33.520 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 14:12:14 GMT - error-message: Please authenticate
+ POST /auth/refresh-token 401 8.282 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 14:12:16 GMT - error-message: Please authenticate
+ POST /auth/login 200 167.245 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 14:15:07 GMT
+ POST /auth/refresh-token 200 32.526 ms PostmanRuntime/7.42.0 Tue, 04 Mar 2025 14:15:24 GMT

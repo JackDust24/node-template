@@ -1,7 +1,6 @@
 const catchAsync = require('./../utils/catchAsync');
 const { blogService } = require('./../services');
 const httpStatus = require('http-status');
-
 const createBlog = catchAsync(async (req, res) => {
   await blogService.createBlog(req.body);
   res

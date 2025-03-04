@@ -1,6 +1,4 @@
-// Verifies if the password is strong enough
 const validator = require('validator');
-
 const password = (value, helpers) => {
   if (!validator.isStrongPassword(value)) {
     return helpers.message(

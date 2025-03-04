@@ -3,7 +3,6 @@ const config = require('./../config/config');
 const ApiError = require('./../utils/ApiError');
 const httpStatus = require('http-status');
 const logger = require('./../config/logger');
-
 const errorConverter = (err, req, res, next) => {
   let error = err;
   if (!(error instanceof ApiError)) {
@@ -12,7 +11,7 @@ const errorConverter = (err, req, res, next) => {
         ? httpStatus.BAD_REQUEST
         : httpStatus.INTERNAL_SERVER_ERROR;
     const message = error.message || httpStatus[statusCode];
-    error = new ApiError(statusCode, message, false, err.stack);
+    error = new ApiError(statusCode, message, false, error.stack);
   }
   next(error);
 };
@@ -23,24 +22,20 @@ const errorHandler = (err, req, res, next) => {
     statusCode = httpStatus.INTERNAL_SERVER_ERROR;
     message = httpStatus[statusCode];
   }
-
   const response = {
     error: true,
     code: statusCode,
     message,
     ...(config.env === 'development' && { stack: err.stack }),
   };
-  // Passes error to express to view
-  res.locals.errorMessage = err.message;
-
+  res.locals.errorMessage = message;
   if (config.env === 'development') {
     logger.error(err);
   }
-
   res.status(statusCode).send(response);
 };
 
 module.exports = {
-  errorConverter,
   errorHandler,
+  errorConverter,
 };

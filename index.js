@@ -11,7 +11,7 @@ mongoose
     logger.info('Connected to MongoDB');
   })
   .catch((error) => {
-    logger.error(err);
+    logger.error(error);
   });
 
 // Create HTTP server
@@ -33,7 +33,7 @@ const exitHandler = () => {
 };
 
 const unExpectedErrorHandler = (error) => {
-  console.error(error);
+  console.error('unExpectedErrorHandler, ', error);
   logger.error(error);
   exitHandler();
 };
