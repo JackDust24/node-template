@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
 });
 
 module.exports = multer({
-  storage,
   fileFilter(req, file, cb) {
     const maxFileSize = 3 * 1024 * 1024;
     if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
