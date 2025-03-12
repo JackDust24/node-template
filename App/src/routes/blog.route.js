@@ -1,16 +1,14 @@
 const express = require('express');
 const upload = require('../utils/multer');
+
 const router = express.Router();
 const { blogValidation } = require('../validations');
 const validate = require('../middlewares/validate');
 const { blogController } = require('../controllers');
 const auth = require('../middlewares/auth');
-router.get(
-  '/blogs',
-  auth,
-  validate(blogValidation.getBlogSchema),
-  blogController.getBlogs,
-);
+const getRecentBlogCache = require('../middlewares/caches/recent-blogs');
+
+router.get('/blogs', auth, getRecentBlogCache, blogController.getRecentBlogs);
 router.post(
   '/blog',
   auth,
