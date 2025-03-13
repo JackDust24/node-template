@@ -5,8 +5,10 @@ const { xss } = require('express-xss-sanitizer');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const cors = require('cors');
+
 const blogRouter = require('../routes/blog.route');
 const authRouter = require('../routes/auth.route');
+const commentRouter = require('../routes/comment.route');
 const { errorHandler, errorConverter } = require('../middlewares/error');
 const ApiError = require('../utils/ApiError');
 const morgan = require('../config/morgan');
@@ -43,6 +45,7 @@ module.exports = async (app) => {
 
   app.use(blogRouter);
   app.use(authRouter);
+  app.use(commentRouter);
 
   // path not found 404
   app.use((req, res, next) => {

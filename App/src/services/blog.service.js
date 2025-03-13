@@ -1,22 +1,26 @@
 const fs = require('fs');
 const httpStatus = require('http-status');
-const { CacheProcessor } = require('../background-tasks');
+const sharp = require('sharp');
+
 const { Blog } = require('../models');
 const ApiError = require('../utils/ApiError');
-const redisClient = require('../config/redis');
 
 const createBlog = async (body, userId) => {
   await Blog.create({ ...body, createdBy: userId });
-  await redisClient.del('recent-blogs');
 };
 
-const getRecentBlogs = async () => {
+const getBlogs = async () => {
   const blogs = await Blog.find()
     .sort({
       createdAt: -1,
     })
     .limit(10);
-  await CacheProcessor.Queue.add('CacheJob', { blogs });
+  // .lean();
+  return blogs;
+};
+
+const searchBlogs = async (searchQuery) => {
+  const blogs = await Blog.find({ $text: { $search: searchQuery } });
   return blogs;
 };
 
@@ -29,8 +33,16 @@ const getReadableFileStream = async (filename) => {
   return stream;
 };
 
+const uploadFile = async (file) => {
+  const filename = `image-${Date.now()}.webp`;
+  const outputPath = `${__dirname}/../../uploads/${filename}`;
+  sharp(file.buffer).resize(600).webp({ quality: 80 }).toFile(outputPath);
+  return filename;
+};
 module.exports = {
   createBlog,
-  getRecentBlogs,
+  getBlogs,
   getReadableFileStream,
+  uploadFile,
+  searchBlogs,
 };

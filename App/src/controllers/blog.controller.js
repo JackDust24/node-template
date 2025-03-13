@@ -2,7 +2,6 @@ const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const { blogService } = require('../services');
 const ApiError = require('../utils/ApiError');
-const { ImageProcessor } = require('../background-tasks');
 
 const createBlog = catchAsync(async (req, res) => {
   await blogService.createBlog(req.body, req.user.id);
@@ -11,20 +10,22 @@ const createBlog = catchAsync(async (req, res) => {
     .send({ success: true, message: 'Blog created successfuly' });
 });
 
-const getRecentBlogs = catchAsync(async (req, res) => {
-  const blogs = await blogService.getRecentBlogs();
+const getBlogs = catchAsync(async (req, res) => {
+  const blogs = await blogService.getBlogs();
   res.status(httpStatus.OK).json(blogs);
+});
+
+const searchBlogs = catchAsync(async (req, res) => {
+  const { searchQuery } = req.query;
+  const blogs = await blogService.searchBlogs(searchQuery);
+  res.json({ blogs });
 });
 
 const uploadFile = catchAsync(async (req, res) => {
   if (!req.file) {
     throw new ApiError(httpStatus.NOT_FOUND, 'File not found');
   }
-  const fileName = `image-${Date.now()}.webp`;
-  await ImageProcessor.Queue.add('ImageProcessorJob', {
-    fileName,
-    file: req.file,
-  });
+  const fileName = await blogService.uploadFile(req.file);
   res.status(httpStatus.OK).json({ fileName });
 });
 
@@ -38,7 +39,8 @@ const getFile = catchAsync(async (req, res) => {
 
 module.exports = {
   createBlog,
-  getRecentBlogs,
+  getBlogs,
   uploadFile,
   getFile,
+  searchBlogs,
 };
