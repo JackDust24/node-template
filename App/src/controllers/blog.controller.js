@@ -10,8 +10,8 @@ const createBlog = catchAsync(async (req, res) => {
     .send({ success: true, message: 'Blog created successfuly' });
 });
 
-const getBlogs = catchAsync(async (req, res) => {
-  const blogs = await blogService.getBlogs();
+const getRecentBlogs = catchAsync(async (req, res) => {
+  const blogs = await blogService.getRecentBlogs();
   res.status(httpStatus.OK).json(blogs);
 });
 
@@ -39,7 +39,7 @@ const getFile = catchAsync(async (req, res) => {
 
 module.exports = {
   createBlog,
-  getBlogs,
+  getRecentBlogs,
   uploadFile,
   getFile,
   searchBlogs,
